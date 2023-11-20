@@ -686,6 +686,10 @@ func (s *storageWriteServer) GetWriteStream(ctx context.Context, req *storagepb.
 		}
 		return stream, err
 	}
+	err := s.updateTableMetadata(ctx, status)
+	if err != nil {
+		return nil, err
+	}
 	return status.stream, nil
 }
 
@@ -829,6 +833,17 @@ func (s *storageWriteServer) createDefaultStream(ctx context.Context, req *stora
 	defer s.mu.Unlock()
 	s.streamMap[streamId] = streamStatus
 	return stream, nil
+}
+
+func (s *storageWriteServer) updateTableMetadata(ctx context.Context, status *writeStreamStatus) error {
+	tableMetadata, err := getTableMetadata(ctx, s.server, status.projectID, status.datasetID, status.tableID)
+	if err != nil {
+		return err
+	}
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	status.tableMetadata = tableMetadata
+	return nil
 }
 
 func getIDsFromPath(path string) (string, string, string, error) {
