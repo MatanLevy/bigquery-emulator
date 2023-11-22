@@ -2305,10 +2305,29 @@ func (h *tabledataInsertAllHandler) Handle(ctx context.Context, r *tabledataInse
 		return nil, err
 	}
 	data := types.Data{}
+	jsonFieldNames := make(map[string]bool)
+	for _, field := range content.Schema.Fields {
+		if field.Type == "JSON" {
+			jsonFieldNames[field.Name] = true
+		}
+	}
 	for _, row := range r.req.Rows {
 		rowData := map[string]interface{}{}
 		for k, v := range row.Json {
+			_, isJsonField := jsonFieldNames[k]
+			if isJsonField {
+				if str, ok := v.(string); ok {
+					var jsonData map[string]interface{}
+					err = json.Unmarshal([]byte(str), &jsonData)
+					if err != nil {
+						return nil, err
+					}
+					rowData[k] = jsonData
+					continue
+				}
+			}
 			rowData[k] = v
+
 		}
 		data = append(data, rowData)
 	}
