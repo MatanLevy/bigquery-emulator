@@ -22,8 +22,8 @@ github.com/DataDog/go-hll v1.0.2/go.mod h1:nVlk+LiOuLOBG2pl+DJtGYBr6r6CUH/bGqebz
 github.com/GoogleCloudPlatform/golang-samples/bigquery v0.0.0-20221115172052-07ffb99455e8 h1:jEVA33EPpr9R1Uc2vhxqd+PefUOqaYy5rAzC9haWPVg=
 github.com/GoogleCloudPlatform/golang-samples/bigquery v0.0.0-20221115172052-07ffb99455e8/go.mod h1:VB6n8DYUiQ07iCBJ5MTjHy8+zI5FNiNT0IDbZ00nhAc=
 github.com/JohnCGriffin/overflow v0.0.0-20211019200055-46fa312c352c h1:RGWPOewvKIROun94nF7v2cua9qP+thov/7M50KEoeSU=
-github.com/MatanLevy/go-zetasqlite v0.17.5 h1:0Z3+O0+yUdRJc8Ro5mbUXXZYiQ507E73Tt4bh6w4zJQ=
-github.com/MatanLevy/go-zetasqlite v0.17.5/go.mod h1:ocaF4qqZZjRXoaBnTFzYDdgLHP2OAgFcTrQQCQyWN5w=
+github.com/MatanLevy/go-zetasqlite v0.17.6 h1:uQrczNo7s+3lknq9knL/bWeI4kEqLj5346iCZSrkfIQ=
+github.com/MatanLevy/go-zetasqlite v0.17.6/go.mod h1:ocaF4qqZZjRXoaBnTFzYDdgLHP2OAgFcTrQQCQyWN5w=
 github.com/andybalholm/brotli v1.0.4 h1:V7DdXeJtZscaqfNuAdSRuRFzuiKlHSC/Zh3zl9qY3JY=
 github.com/andybalholm/brotli v1.0.4/go.mod h1:fO7iG3H7G2nSZ7m0zPUDn85XEX2GTukHGRSepvi9Eig=
 github.com/apache/arrow/go/v10 v10.0.1 h1:n9dERvixoC/1JjDmBcs9FPaEryoANa2sCgVFo6ez9cI=
