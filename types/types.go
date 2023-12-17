@@ -564,7 +564,7 @@ func normalizeData(v interface{}, field *bigqueryv2.TableFieldSchema) (interface
 		}
 		return values, nil
 	}
-	if kind == reflect.Map && field.Type == "RECORD" {
+	if kind == reflect.Map && field.Type != "JSON" {
 		fieldMap := map[string]*bigqueryv2.TableFieldSchema{}
 		columnNameToValueMap := map[string]interface{}{}
 		for _, f := range field.Fields {
