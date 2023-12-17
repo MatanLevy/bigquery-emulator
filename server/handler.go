@@ -7,6 +7,7 @@ import (
 	"encoding/csv"
 	"errors"
 	"fmt"
+	"github.com/MatanLevy/go-zetasqlite"
 	"html"
 	"io"
 	"mime"
@@ -21,7 +22,6 @@ import (
 
 	"cloud.google.com/go/storage"
 	"github.com/goccy/go-json"
-	"github.com/goccy/go-zetasqlite"
 	"go.uber.org/zap"
 	bigqueryv2 "google.golang.org/api/bigquery/v2"
 	"google.golang.org/api/iterator"

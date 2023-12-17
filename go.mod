@@ -2,19 +2,17 @@ module github.com/goccy/bigquery-emulator
 
 go 1.18
 
-replace github.com/goccy/go-zetasqlite => github.com/MatanLevy/go-zetasqlite v0.17.8
-
 require (
 	cloud.google.com/go/bigquery v1.51.0
 	cloud.google.com/go/storage v1.29.0
 	github.com/GoogleCloudPlatform/golang-samples/bigquery v0.0.0-20221115172052-07ffb99455e8
+	github.com/MatanLevy/go-zetasqlite v0.17.11
 	github.com/apache/arrow/go/v10 v10.0.1
 	github.com/fsouza/fake-gcs-server v1.43.0
 	github.com/go-playground/validator/v10 v10.11.0
 	github.com/goccy/go-json v0.10.0
 	github.com/goccy/go-yaml v1.9.5
-	github.com/goccy/go-zetasql v0.5.1
-	github.com/goccy/go-zetasqlite v0.17.8
+	github.com/goccy/go-zetasql v0.5.2
 	github.com/google/go-cmp v0.5.9
 	github.com/googleapis/gax-go/v2 v2.7.1
 	github.com/gorilla/mux v1.8.0

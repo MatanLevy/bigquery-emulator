@@ -4,11 +4,11 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"github.com/MatanLevy/go-zetasqlite"
 	"reflect"
 	"sort"
 	"strings"
 
-	"github.com/goccy/go-zetasqlite"
 	"go.uber.org/zap"
 	bigqueryv2 "google.golang.org/api/bigquery/v2"
 

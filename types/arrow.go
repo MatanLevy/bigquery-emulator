@@ -2,13 +2,12 @@ package types
 
 import (
 	"fmt"
-	"strconv"
-	"time"
-
+	"github.com/MatanLevy/go-zetasqlite"
 	"github.com/apache/arrow/go/v10/arrow"
 	"github.com/apache/arrow/go/v10/arrow/array"
-	"github.com/goccy/go-zetasqlite"
 	bigqueryv2 "google.golang.org/api/bigquery/v2"
+	"strconv"
+	"time"
 )
 
 func TableToARROW(t *bigqueryv2.Table) (*arrow.Schema, error) {

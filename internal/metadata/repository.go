@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
+	"github.com/MatanLevy/go-zetasqlite"
 
 	"github.com/goccy/go-json"
-	"github.com/goccy/go-zetasqlite"
 	bigqueryv2 "google.golang.org/api/bigquery/v2"
 
 	internaltypes "github.com/goccy/bigquery-emulator/internal/types"
