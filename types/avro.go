@@ -2,12 +2,12 @@ package types
 
 import (
 	"fmt"
+	"github.com/MatanLevy/go-zetasqlite"
 	"math/big"
 	"strconv"
 	"time"
 
 	"github.com/goccy/go-json"
-	"github.com/goccy/go-zetasqlite"
 	bigqueryv2 "google.golang.org/api/bigquery/v2"
 )
 

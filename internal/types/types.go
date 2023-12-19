@@ -2,11 +2,11 @@ package types
 
 import (
 	"fmt"
+	"github.com/MatanLevy/go-zetasqlite"
 	"time"
 
 	"github.com/apache/arrow/go/v10/arrow/array"
 	"github.com/goccy/bigquery-emulator/types"
-	"github.com/goccy/go-zetasqlite"
 	bigqueryv2 "google.golang.org/api/bigquery/v2"
 )
 
@@ -192,7 +192,7 @@ func Format(schema *bigqueryv2.TableSchema, rows []*TableRow, useInt64Timestamp 
 	for _, row := range rows {
 		cells := make([]*TableCell, 0, len(row.F))
 		for colIdx, cell := range row.F {
-			if schema.Fields[colIdx].Type == "TIMESTAMP" {
+			if schema.Fields[colIdx].Type == "TIMESTAMP" && cell.V != nil {
 				t, _ := zetasqlite.TimeFromTimestampValue(cell.V.(string))
 				microsec := t.UnixNano() / int64(time.Microsecond)
 				cells = append(cells, &TableCell{
